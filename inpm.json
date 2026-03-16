@@ -1,0 +1,16 @@
+{
+  "packages": {
+    "hello": {
+      "version": "1.0.0",
+      "path": "packages/hello"
+    },
+    "python": {
+      "version": "3.11.0",
+      "path": "packages/python3"
+    },
+    "nodejs": {
+      "version": "20.11.0",
+      "path": "packages/nodejs"
+    }
+  }
+}
