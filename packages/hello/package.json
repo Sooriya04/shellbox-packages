@@ -4,5 +4,5 @@
   "description": "A simple test package",
   "license": "MIT",
   "homepage": "https://github.com/sooriya/package_manager",
-  "dependencies": []
+  "dependencies": {}
 }
