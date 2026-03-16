@@ -1,6 +1,6 @@
 {
   "name": "nodejs",
-  "version": "20.11.0",
+  "version": "24.0.0",
   "description": "Node.js is an open-source, cross-platform JavaScript runtime environment.",
   "license": "MIT",
   "homepage": "https://nodejs.org",

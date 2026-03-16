@@ -3,28 +3,25 @@
 # Exit script if any command fails
 set -e
 
-echo "Installing NodeJS 20.11.0..."
+echo "Installing Node.js 24 using NVM..."
 
-# Create a temporary directory for the download
-TMP_DIR=$(mktemp -d)
-cd "${TMP_DIR}"
+# Download and install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
-# Download official Node.js precompiled binaries for Linux x64
-echo "Downloading NodeJS distribution..."
-wget -q --show-progress "https://nodejs.org/dist/v20.11.0/node-v20.11.0-linux-x64.tar.xz" -O node.tar.xz
+# Load nvm into the current shell session
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-echo "Extracting NodeJS..."
-tar -xf node.tar.xz
+# Download and install Node.js version 24
+nvm install 24
 
-# The archive extracts to "node-v20.11.0-linux-x64"
-echo "Installing to ${PREFIX}..."
-# Copy the bin, include, lib, and share directories to PREFIX
-cp -R node-v20.11.0-linux-x64/* "${PREFIX}/"
+# Verify the Node.js version
+echo "Verifying Node.js version..."
+node -v
 
-# Clean up
-cd /
-rm -rf "${TMP_DIR}"
+# Verify npm version
+echo "Verifying npm version..."
+npm -v
 
-echo "NodeJS 20.11.0 installation complete."
-node --version
-npm --version
+echo "Node.js 24 installation complete via NVM!"
+echo "Note: NVM sets up Node.js for your user profile ($HOME). You may need to restart your shell or run 'source ~/.bashrc' (or equivalent) for node commands to be available in new sessions."

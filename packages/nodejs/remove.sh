@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
 
-echo "Removing NodeJS 20.11.0..."
-rm -f "${PREFIX}/bin/node"
-rm -f "${PREFIX}/bin/npm"
-rm -f "${PREFIX}/bin/npx"
-rm -rf "${PREFIX}/lib/node_modules"
-rm -rf "${PREFIX}/include/node"
-echo "NodeJS 20.11.0 uninstalled successfully."
+echo "Removing Node.js installed via NVM..."
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+if command -v nvm >/dev/null 2>&1; then
+    nvm uninstall 24
+    echo "Removed Node.js 24."
+else
+    echo "NVM not found, skipping node version removal."
+fi
+
+# Optional: Remove NVM entirely if you don't want it left behind
+# rm -rf "$NVM_DIR"
+
+echo "Node.js uninstalled."
