@@ -6,7 +6,7 @@
     },
     "python": {
       "version": "3.11.0",
-      "path": "packages/python3"
+      "path": "packages/python"
     },
     "nodejs": {
       "version": "24.0.0",
