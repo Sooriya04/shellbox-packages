@@ -1,0 +1,8 @@
+{
+  "name": "nano",
+  "version": "7.2",
+  "description": "GNU nano is a simple terminal-based text editor.",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://www.nano-editor.org/",
+  "dependencies": []
+}

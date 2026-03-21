@@ -8,3 +8,10 @@ feat: initialize ShellBox package repository with runtime support
 - Configure .gitignore and project README
 - Initialize repository for Git version control
 - Ensure compatibility with Android PackageRepository.kt
+
+feat: add nano 7.2 package
+
+- Create `packages/nano` structure with `package.json`
+- Implement `install.sh` for automated nano 7.2 build from source
+- Add `remove.sh` for package uninstallation
+- Register nano 7.2 in global `index.json`

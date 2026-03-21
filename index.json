@@ -11,6 +11,10 @@
     "nodejs": {
       "version": "24.0.0",
       "path": "packages/nodejs"
+    },
+    "nano": {
+      "version": "7.2",
+      "path": "packages/nano"
     }
   }
 }
